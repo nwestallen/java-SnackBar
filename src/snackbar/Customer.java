@@ -15,6 +15,15 @@ public class Customer {
 
     }
 
+    public Customer(String name, double cash) {
+
+        maxId ++;
+        this.id = maxId;
+        this.name = name;
+        this.cash = cash;
+        
+    }
+
     public int getId() {
         return id;
     }
