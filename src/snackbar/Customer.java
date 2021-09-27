@@ -21,7 +21,7 @@ public class Customer {
         this.id = maxId;
         this.name = name;
         this.cash = cash;
-        
+
     }
 
     public int getId() {
@@ -45,8 +45,9 @@ public class Customer {
     }
 
     public void buySnack(Snack snack, int quantity) {
-        this.cash -= snack.getCost() * quantity;
+        this.cash -= (snack.getCost() * quantity);
         snack.sellSnack(quantity);
+        System.out.println(this.getName() + " buys " + quantity + " of " + snack.getName());
     }
 
 

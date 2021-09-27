@@ -2,7 +2,7 @@ package snackbar;
 
 public class Main {
 
-    public static void main() {
+    public static void main(String[] args) {
         System.out.println("snackbar app");
 
         //Instantiate customers
@@ -15,12 +15,22 @@ public class Main {
         VendingMachine Office = new VendingMachine("Office");
 
         //Instantiate Snacks
-        Snack Chips = new Snack("Chips", 1.75, 1);
-        Snack ChocolateBar =  new Snack("Chocolate Bar", 1.00, 1);
-        Snack Pretzel = new Snack("Pretzel", 2.00, 1);
+        Snack Chips = new Snack("Chips", 1.75, 1, 36);
+        Snack ChocolateBar =  new Snack("Chocolate Bar", 1.00, 1, 36);
+        Snack Pretzel = new Snack("Pretzel", 2.00, 1, 30);
 
-        Snack Soda = new Snack("Soda", 2.50, 2);
-        Snack Water = new Snack("Water", 2.75, 2);
+        Snack Soda = new Snack("Soda", 2.50, 2, 24);
+        Snack Water = new Snack("Water", 2.75, 2, 20);
+
+        Jane.buySnack(Soda, 3);
+        System.out.println("Jane's cash on hand is " + Jane.getCash());
+        System.out.println("Quantity of soda is " + Soda.getQuantity());
+        System.out.println("");
+
+        Jane.buySnack(Pretzel, 1);
+        System.out.println("Jane's cash on hand is " + Jane.getCash());
+        System.out.println("Quantity of pretzel is " + Pretzel.getQuantity());
+        System.out.println("");
 
     }
     

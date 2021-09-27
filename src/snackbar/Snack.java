@@ -19,6 +19,17 @@ public class Snack {
 
     }
 
+    public Snack(String name, double cost, int vendingMachineId, int quantity) {
+
+        maxId ++;
+        this.id = maxId;
+        this.name = name;
+        this.cost = cost;
+        this.vendingMachineId = vendingMachineId;
+        this. quantity = quantity;
+
+    }
+
     public int getId() {
         return id;
     }
