@@ -23,7 +23,7 @@ public class Customer {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
     }
 
@@ -35,7 +35,10 @@ public class Customer {
         this.cash += cash;
     }
 
-    
+    public void buySnack(Snack snack, int quantity) {
+        this.cash -= snack.getCost() * quantity;
+        snack.sellSnack(quantity);
+    }
 
 
 }
