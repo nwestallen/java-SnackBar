@@ -32,6 +32,27 @@ public class Main {
         System.out.println("Quantity of pretzel is " + Pretzel.getQuantity());
         System.out.println("");
 
+        Bob.buySnack(Soda, 2);
+        System.out.println("Bob's cash on hand is " + Bob.getCash());
+        System.out.println("Quantity of soda is " + Soda.getQuantity());
+        System.out.println("");
+
+        System.out.println("Jane found $10!");
+        Jane.addCash(10.00);
+        System.out.println("Jane's cash on hand is " + Jane.getCash());
+        Jane.buySnack(ChocolateBar, 1);
+        System.out.println("Jane's cash on hand is " + Jane.getCash());
+        System.out.println("Quantity of chocolate bar is " + ChocolateBar.getQuantity());
+        System.out.println("");
+
+        System.out.println("12 pretzels added to stock");
+        Pretzel.addQuantity(12);
+        System.out.println("Quantity of pretzel is " + Pretzel.getQuantity());
+        Bob.buySnack(Pretzel, 3);
+        System.out.println("Bob's cash on hand is " + Bob.getCash());
+        System.out.println("Quantity of pretzel is " + Pretzel.getQuantity());
+
+
     }
     
 }
